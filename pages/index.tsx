@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Link, Text } from "@chakra-ui/react";
+import { Container, Text } from "@chakra-ui/react";
 import type { NextPage } from "next";
 
 const Home: NextPage = () => {
