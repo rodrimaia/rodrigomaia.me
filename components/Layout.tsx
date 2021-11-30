@@ -1,6 +1,7 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
+  Container,
   Flex,
   IconButton,
   Link,
@@ -46,22 +47,28 @@ export const Layout: React.FC = ({ children }) => {
   ));
 
   return (
-    <Box bg="haiti" minHeight="100vh" textColor={"lightGray"}>
+    <Box
+      bg="haiti"
+      position="fixed"
+      height="100%"
+      minHeight="100vh"
+      minWidth="100vw"
+      textColor={"lightGray"}
+    >
       <Head>
         <title>Rodrigo Maia</title>
         <meta name="description" content="Rodrigo's personal site" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Flex pl="7" py="5" justify="space-between">
-          <Flex
-            visibility={{ base: "hidden", md: "visible" }}
-            sx={{ gap: "24px" }}
-          >
-            {links}
-          </Flex>
-          <Box visibility={{ base: "visible", md: "hidden" }} pr="7">
+      <Box 
+      as="main"
+      >
+        <Flex display={{ base: "none", md: "flex" }} pl="7" py="5" sx={{ gap: "24px" }}>
+          {links}
+        </Flex>
+        <Flex display={{ base: "flex", md: "none" }} px="7" py="5" justify={"flex-end"} >
+          <Box>
             <Menu>
               <MenuButton
                 as={IconButton}
@@ -96,7 +103,7 @@ export const Layout: React.FC = ({ children }) => {
           </Box>
         </Flex>
         {children}
-      </main>
+      </Box>
 
       <footer></footer>
     </Box>
