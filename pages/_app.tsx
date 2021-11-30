@@ -3,7 +3,7 @@ import {
   ChakraProvider,
   extendTheme
 } from "@chakra-ui/react";
-import "@fontsource/open-sans/500.css";
+import "@fontsource/fira-code/500.css";
 import splitbee from "@splitbee/web";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
@@ -11,8 +11,8 @@ import { Layout } from "../components/Layout";
 
 const customTheme = {
   fonts: {
-    heading: "Open Sans",
-    body: "Open Sans",
+    heading: "Fira Code",
+    body: "Fira Code",
   },
   colors: {
     haiti: "#171031",
