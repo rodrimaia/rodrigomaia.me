@@ -75,7 +75,7 @@ const Layout: React.FC = ({ children }) => {
       </Head>
 
       <main>
-        <Flex pl="7" pt="5" justify="space-between">
+        <Flex pl="7" py="5" justify="space-between">
           <Flex
             visibility={{ base: "hidden", md: "visible" }}
             sx={{ gap: "24px" }}
