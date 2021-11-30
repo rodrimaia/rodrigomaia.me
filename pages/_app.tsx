@@ -15,10 +15,10 @@ const customTheme = {
     body: "Open Sans",
   },
   colors: {
-    haiti: "#161130",
-    lightGray: "#EBECF8",
-    blue: "#42C6FF",
-    pink: "#DF85FF",
+    haiti: "#171031",
+    lightGray: "#EAECF8",
+    blue: "#00C8FF",
+    pink: "#F700DE",
     brand: {
       900: "#1a365d",
       800: "#153e75",
