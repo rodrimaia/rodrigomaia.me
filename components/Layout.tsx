@@ -8,8 +8,9 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Text
+  Text,
 } from "@chakra-ui/react";
+import splitbee from "@splitbee/web";
 import Head from "next/head";
 import NextLink from "next/link";
 
@@ -33,13 +34,19 @@ export const TextLink = ({ label }: { label: string }) => (
 export const Layout: React.FC = ({ children }) => {
   const links = linksTopbar.map((l) => (
     <NextLink key={l.href} href={l.href} passHref>
-      <Link isExternal={l.isExternal}>
+      <Link
+        isExternal={l.isExternal}
+        onClick={() => {
+          splitbee.track(`click-${l.label}`);
+        }}
+      >
         <TextLink label={l.label} />
       </Link>
     </NextLink>
   ));
+
   return (
-    <Box as="body" bg="haiti" minHeight="100vh" textColor={"lightGray"}>
+    <Box bg="haiti" minHeight="100vh" textColor={"lightGray"}>
       <Head>
         <title>Rodrigo Maia</title>
         <meta name="description" content="Rodrigo's personal site" />
@@ -54,7 +61,7 @@ export const Layout: React.FC = ({ children }) => {
           >
             {links}
           </Flex>
-          <Box display={{ base: "block", md: "none" }} pr="7">
+          <Box visibility={{ base: "visible", md: "hidden" }} pr="7">
             <Menu>
               <MenuButton
                 as={IconButton}
@@ -66,7 +73,12 @@ export const Layout: React.FC = ({ children }) => {
                 {linksTopbar.map((l) => (
                   <MenuItem key={l.href}>
                     <NextLink key={l.href} href={l.href} passHref>
-                      <Link isExternal={l.isExternal}>
+                      <Link
+                        isExternal={l.isExternal}
+                        onClick={() => {
+                          splitbee.track(`click-${l.label}`);
+                        }}
+                      >
                         <Text
                           fontSize="2xl"
                           color="haiti"
