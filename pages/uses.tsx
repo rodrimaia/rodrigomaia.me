@@ -75,7 +75,7 @@ const UsesPage = () => {
 
       {usesSections.map((section) => (
         <Box key={section.title} pb={5}>
-          <Heading as="h2"> {section.title} </Heading>
+          <Heading as="h2" size="lg"> {section.title} </Heading>
           <UnorderedList>
             {section.things.map((thing) => (
               <ListItem key={thing.name} py={2}>
