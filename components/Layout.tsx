@@ -1,4 +1,4 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 import {
   Box,
   Container,
@@ -27,9 +27,9 @@ export const linksTopbar = [
   },
 ];
 
-export const TextLink = ({ label }: { label: string }) => (
+export const TextLink = ({ label, isExternal }: { label: string, isExternal: boolean }) => (
   <Text fontSize="2xl" letterSpacing="widest" fontWeight="semibold">
-    {label}
+    {label}{isExternal && <ExternalLinkIcon mx="2px" />}
   </Text>
 );
 
@@ -42,7 +42,7 @@ export const Layout: React.FC = ({ children }) => {
           splitbee.track(`click-${l.label}`);
         }}
       >
-        <TextLink label={l.label} />
+        <TextLink label={l.label} isExternal={!!l.isExternal} />
       </Link>
     </NextLink>
   ));
@@ -91,7 +91,7 @@ export const Layout: React.FC = ({ children }) => {
                           letterSpacing="widest"
                           fontWeight="semibold"
                         >
-                          {l.label}
+                          {l.label}{l.isExternal && <ExternalLinkIcon mx="2px" />}
                         </Text></MenuItem>
                       </Link>
                     </NextLink>
