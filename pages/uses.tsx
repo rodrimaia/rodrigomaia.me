@@ -59,6 +59,11 @@ const usesSections: UsesSection[] = [
         link: "https://copilot.github.com/",
         description: "IF YOU ARE NOT USING IT, YOU ARE WRONG.",
       },
+      {
+        name: "Outrun night theme",
+        link: "https://github.com/samrap/outrun-theme-vscode",
+        description: "I may or may not have copied my website theme from it.",
+      },
     ],
   },
 ];
@@ -75,7 +80,10 @@ const UsesPage = () => {
 
       {usesSections.map((section) => (
         <Box key={section.title} pb={5}>
-          <Heading as="h2" size="lg"> {section.title} </Heading>
+          <Heading as="h2" size="lg">
+            {" "}
+            {section.title}{" "}
+          </Heading>
           <UnorderedList>
             {section.things.map((thing) => (
               <ListItem key={thing.name} py={2}>
