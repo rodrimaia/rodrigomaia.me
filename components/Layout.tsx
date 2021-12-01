@@ -17,6 +17,7 @@ import NextLink from "next/link";
 
 export const linksTopbar = [
   { href: "/", label: "home" },
+  { href: "/uses", label: "uses" },
   { href: "/resume.pdf", label: "resume", isExternal: true },
   { href: "http://github.com/rodrimaia", label: "github", isExternal: true },
   {
@@ -49,8 +50,6 @@ export const Layout: React.FC = ({ children }) => {
   return (
     <Box
       bg="haiti"
-      position="fixed"
-      height="100%"
       minHeight="100vh"
       minWidth="100vw"
       textColor={"lightGray"}
@@ -78,7 +77,6 @@ export const Layout: React.FC = ({ children }) => {
               />
               <MenuList>
                 {linksTopbar.map((l) => (
-                  <MenuItem key={l.href}>
                     <NextLink key={l.href} href={l.href} passHref>
                       <Link
                         isExternal={l.isExternal}
@@ -86,6 +84,7 @@ export const Layout: React.FC = ({ children }) => {
                           splitbee.track(`click-${l.label}`);
                         }}
                       >
+                  <MenuItem key={l.href}>
                         <Text
                           fontSize="2xl"
                           color="haiti"
@@ -93,10 +92,9 @@ export const Layout: React.FC = ({ children }) => {
                           fontWeight="semibold"
                         >
                           {l.label}
-                        </Text>
+                        </Text></MenuItem>
                       </Link>
                     </NextLink>
-                  </MenuItem>
                 ))}
               </MenuList>
             </Menu>
