@@ -1,28 +1,11 @@
-import { ExternalLinkIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Container,
-  Heading,
-  Link,
-  ListItem,
-  Text,
-  UnorderedList,
-} from "@chakra-ui/react";
-import splitbee from "@splitbee/web";
+import { Box, Container, Heading, Text } from "@chakra-ui/react";
+import React from "react";
+import LinksList, { LinksListSection } from "../components/LinksList";
 
-type UsesSection = {
-  title: string;
-  things: {
-    name: string;
-    link?: string;
-    description: string;
-  }[];
-};
-
-const usesSections: UsesSection[] = [
+const usesSections: LinksListSection[] = [
   {
     title: "Desk",
-    things: [
+    items: [
       {
         name: "MacBook Pro (16-inch, 2019)",
         description:
@@ -48,7 +31,7 @@ const usesSections: UsesSection[] = [
   },
   {
     title: "Coding",
-    things: [
+    items: [
       {
         name: "VSCode",
         link: "https://code.visualstudio.com/",
@@ -79,37 +62,7 @@ const UsesPage = () => {
       </Box>
 
       {usesSections.map((section) => (
-        <Box key={section.title} pb={5}>
-          <Heading as="h2" size="lg">
-            {" "}
-            {section.title}{" "}
-          </Heading>
-          <UnorderedList>
-            {section.things.map((thing) => (
-              <ListItem key={thing.name} py={2}>
-                <Text as="span" color="blue" fontWeight={"bold"}>
-                  {" "}
-                  {thing.link ? (
-                    <Link
-                      color="blue"
-                      href={thing.link}
-                      onClick={() => splitbee.track(`click-uses-${thing.name}`)}
-                      isExternal
-                    >
-                      {thing.name} <ExternalLinkIcon mx="2px" />
-                    </Link>
-                  ) : (
-                    thing.name
-                  )}
-                  : &nbsp;
-                </Text>
-                <Text as="span" fontWeight="hairline">
-                  {thing.description}
-                </Text>
-              </ListItem>
-            ))}
-          </UnorderedList>
-        </Box>
+        <LinksList pageName="uses" key={section.title} section={section} />
       ))}
     </Container>
   );
