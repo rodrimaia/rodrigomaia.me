@@ -43,6 +43,10 @@ const usesSections: LinksListSection[] = [
         name: "Copos longos",
         link: "https://produto.mercadolivre.com.br/MLB-1570945607-jogo-12-copos-long-drink-vidro-aiala-vicrila-310ml-_JM?matt_tool=40168140&matt_word=&matt_source=google&matt_campaign_id=14302215507&matt_ad_group_id=134553697108&matt_match_type=&matt_network=g&matt_device=c&matt_creative=539425477636&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=252522575&matt_product_id=MLB1570945607&matt_product_partition_id=1403983331189&matt_target_id=pla-1403983331189&gclid=CjwKCAiA78aNBhAlEiwA7B76p7Ot71j2EzPB_Lt6P_c9A6i3JyWJL1q_Qx9o4AtUBA721hKXETv-0hoCJVYQAvD_BwE",
       },
+      {
+        name: "Roupas",
+        link: "https://www.google.com/search?q=roupas+pro+rodrigo+parecer+o+david+beckham&sxsrf=AOaemvJCWNeQkq26AinzjfL8cqv6mpXT5Q%3A1639073177753&ei=mUWyYbzvLJi_5OUP_v-PuA0&ved=0ahUKEwj8n5S0p9f0AhWYH7kGHf7_A9cQ4dUDCA4&uact=5&oq=roupas+pro+rodrigo+parecer+o+david+beckham&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BQghEKABOgcIIRAKEKABSgQIQRgASgQIRhgAUJcQWP0pYJcraAJwAngAgAHPAYgB5xqSAQYwLjIyLjGYAQCgAQHIAQbAAQE&sclient=gws-wiz",
+      },
     ],
   },
 ];
