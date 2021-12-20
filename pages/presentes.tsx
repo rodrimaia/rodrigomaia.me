@@ -47,6 +47,14 @@ const usesSections: LinksListSection[] = [
         name: "Roupas",
         link: "https://www.google.com/search?q=roupas+pro+rodrigo+parecer+o+david+beckham&sxsrf=AOaemvJCWNeQkq26AinzjfL8cqv6mpXT5Q%3A1639073177753&ei=mUWyYbzvLJi_5OUP_v-PuA0&ved=0ahUKEwj8n5S0p9f0AhWYH7kGHf7_A9cQ4dUDCA4&uact=5&oq=roupas+pro+rodrigo+parecer+o+david+beckham&gs_lcp=Cgdnd3Mtd2l6EAM6BwgAEEcQsAM6BQghEKABOgcIIRAKEKABSgQIQRgASgQIRhgAUJcQWP0pYJcraAJwAngAgAHPAYgB5xqSAQYwLjIyLjGYAQCgAQHIAQbAAQE&sclient=gws-wiz",
       },
+      {
+        name: "Joias",
+        link: "https://www.google.com/search?sxsrf=AOaemvLzt4M7CUujLBkcAvC_IkcrUVpBNA:1640026011643&q=joias+bonitas+mas+que+nao+me+deixam+parecendo+o+johnny+depp&spell=1&sa=X&ved=2ahUKEwj8iuL-hPP0AhV-LLkGHcfqDtkQBSgAegQIARA2&biw=1344&bih=679&dpr=2"
+      },
+      {
+        name: "Panelas e vasilhames que dá pra lavar no lava-louças",
+        link: "https://www.cleanipedia.com/br/limpeza-da-cozinha/lava-loucas-lava-panelas-de-quais-tipos.html"
+      }
     ],
   },
 ];
