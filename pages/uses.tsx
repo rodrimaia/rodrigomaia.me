@@ -7,9 +7,9 @@ const usesSections: LinksListSection[] = [
     title: "Desk",
     items: [
       {
-        name: "MacBook Pro (16-inch, 2019)",
+        name: "MacBook Pro M1 (14-inch, 2021)",
         description:
-          "Definitely looking forward to experimenting with the new M1 chips. ;D",
+          "A powerful laptop with a beautiful display. Way better than the 2019 intel version.",
       },
       {
         name: "GenioDesk PRO",
@@ -24,8 +24,25 @@ const usesSections: LinksListSection[] = [
           "if you see some typos in this document, the keyboard  is probably the one to blabe.",
       },
       {
-        name: "Regular Dell 27 HD monitor",
-        description: "Getting a 4k monitor soon.",
+        name: "Regular Dell 27 4k 144hz monitor",
+        description:
+          "Work and play monitor. (by play I mean figuring out how to survive on Oxygen Not Included)",
+      },
+    ],
+  },
+  {
+    title: "Tools/Apps",
+    items: [
+      {
+        name: "Raycast",
+        link: "https://raycast.com/",
+        description: "A better launcher than Alfred and Spotlight.",
+      },
+      {
+        name: "Notion",
+        link: "https://www.notion.so/",
+        description:
+          "It made me switch from Emacs Org Mode. Still not sure if it was a good decision.",
       },
     ],
   },
@@ -47,6 +64,11 @@ const usesSections: LinksListSection[] = [
         link: "https://github.com/samrap/outrun-theme-vscode",
         description: "I may or may not have copied my website theme from it.",
       },
+      {
+        name: "asdf",
+        link: "https://github.com/asdf-vm/asdf",
+        description: "Finally a multi-language version tool to rule them all.",
+      },
     ],
   },
 ];
@@ -58,7 +80,7 @@ const UsesPage = () => {
         <Heading color="pink" pb={2} as="h1">
           What I use
         </Heading>
-        <Text> A living document with everything I use on my day-to-day</Text>
+        <Text> A living document with a few things I use on my day-to-day</Text>
       </Box>
 
       {usesSections.map((section) => (
