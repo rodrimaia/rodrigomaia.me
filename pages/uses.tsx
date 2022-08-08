@@ -24,7 +24,8 @@ const usesSections: LinksListSection[] = [
           "if you see some typos in this document, the keyboard  is probably the one to blabe.",
       },
       {
-        name: "Regular Dell 27 4k 144hz monitor",
+        name: `Monitor 165Hz 27" Dell S2721DGF`,
+        link: "https://www.dell.com/pt-br/shop/monitor-165hz-gamer-27-dell-s2721dgf/apd/210-bbmu/monitores-e-acess%C3%B3rios",
         description:
           "Work and play monitor. (by play I mean figuring out how to survive on Oxygen Not Included)",
       },
@@ -43,6 +44,11 @@ const usesSections: LinksListSection[] = [
         link: "https://www.notion.so/",
         description:
           "It made me switch from Emacs Org Mode. Still not sure if it was a good decision.",
+      },
+      {
+        name: "Dozer",
+        link: "https://github.com/Mortennn/Dozer",
+        description: "Hide menu bar on macOS. (must have for the new macbook pro with the notch)",
       },
     ],
   },
