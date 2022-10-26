@@ -4,6 +4,16 @@ import LinksList, { LinksListSection } from "../components/LinksList";
 
 const usesSections: LinksListSection[] = [
   {
+    title: "Livros",
+    items: [
+      {
+        name: "How to make the best coffee at home - James Hoffman <3",
+        link: "https://www.amazon.com.br/How-Make-Best-Coffee-Home/dp/1784727245"
+      }
+    ]
+  }
+  ,
+  {
     title: "Outros",
     items: [
       {
