@@ -17,6 +17,9 @@ const usesSections: LinksListSection[] = [
     title: "Outros",
     items: [
       {
+        name: "jarra de café da hario que eu tinha e quebrou"
+      },
+      {
         name: "Carteira de Couro (normal, bonita, cansei das 'moderninhas')"
       },
       {
