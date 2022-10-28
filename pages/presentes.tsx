@@ -17,6 +17,10 @@ const usesSections: LinksListSection[] = [
     title: "Outros",
     items: [
       {
+        name: "Whisky Bourbon Bulleit",
+        link: "https://www.google.com/search?q=Bulleit&oq=bulleit&aqs=chrome.0.69i59j0i433i512j46i433i512l2j0i131i433i512j69i60l3.2224j0j7&sourceid=chrome&ie=UTF-8"
+      },
+      {
         name: "jarra de café da hario que eu tinha e quebrou"
       },
       {
