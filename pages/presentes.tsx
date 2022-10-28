@@ -17,6 +17,10 @@ const usesSections: LinksListSection[] = [
     title: "Outros",
     items: [
       {
+        name: "Calca chino com elastano hering tamanho 50",
+        link: "https://produto.mercadolivre.com.br/MLB-1266627460-calca-basica-masculina-chino-com-elastano-hering-_JM?variation=174954007280"
+      },
+      {
         name: "Whisky Bourbon Bulleit",
         link: "https://www.google.com/search?q=Bulleit&oq=bulleit&aqs=chrome.0.69i59j0i433i512j46i433i512l2j0i131i433i512j69i60l3.2224j0j7&sourceid=chrome&ie=UTF-8"
       },
