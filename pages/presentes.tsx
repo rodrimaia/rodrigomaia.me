@@ -16,7 +16,8 @@ const usesSections: LinksListSection[] = [
       {
         name: "DARA",
         link: "https://doebem.org.br/dara/"
-      }
+      },
+      { name: "Alimentando Necessidades =X", strikethrough: true },
     ]
   },
   {

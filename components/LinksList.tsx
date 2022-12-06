@@ -13,6 +13,7 @@ export type ListItem = {
   name: string;
   link?: string;
   description?: string;
+  strikethrough?: boolean;
 };
 
 export type LinksListSection = {
@@ -50,7 +51,9 @@ const LinksList = ({
                   {thing.name} <ExternalLinkIcon mx="2px" />
                 </Link>
               ) : (
-                thing.name
+                  <span style={thing.strikethrough ? { textDecoration: "line-through" } : undefined }>
+                    {thing.name}
+                </span>
               )}
               {thing.description && `: `}
               &nbsp;
