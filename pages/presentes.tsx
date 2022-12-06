@@ -36,6 +36,10 @@ const usesSections: LinksListSection[] = [
         link: "https://www.amazon.com.br/TRIPULA%C3%87%C3%83O-Jogo-Tabuleiro-Devir/dp/B08W1KQFKB/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PZA44850GYL2&keywords=a+tripula%C3%A7%C3%A3o&qid=1670337382&s=toys&sprefix=a+tripulac%2Ctoys%2C226&sr=1-4&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12"
       },
       {
+        name: "Root",
+        link: "https://www.amazon.com.br/Meeple-BR-Jogos-Jogo-Tabuleiro/dp/B07S2ZW2W6/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2C07ZE81T9RMD&keywords=root&qid=1670338603&sprefix=so+clover%2Caps%2C331&sr=8-1&ufe=app_do%3Aamzn1.fos.4bb5663b-6f7d-4772-84fa-7c7f565ec65b"
+      },
+      {
         name: "Ticket to Ride",
         link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-TTR001-Ticket-Ride/dp/B07BHW19H6?ref_=ast_sto_dp"
       },
