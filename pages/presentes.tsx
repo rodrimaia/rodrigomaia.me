@@ -54,7 +54,7 @@ const usesSections: LinksListSection[] = [
         link: "https://www.amazon.com.br/Licor-Creme-Caf%C3%A9-Kahlua-750ml/dp/B01N58C3CQ/ref=asc_df_B01N58C3CQ/?tag=googleshopp00-20&linkCode=df0&hvadid=404773626903&hvpos=&hvnetw=g&hvrand=4745045580191494946&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-329122067235&psc=1"
       }
     ]
-  }
+  },
   {
     title: "Livros",
     items: [
