@@ -21,6 +21,41 @@ const usesSections: LinksListSection[] = [
     ]
   },
   {
+    title: "Jogos de Tabuleiro",
+    items: [
+      {
+        name: "Wingspan",
+        link: "https://www.amazon.com.br/Wingspan-Jogo-de-tabuleiro-Grok/dp/B07PT68643"
+      },
+      {
+        name: "Cascadia",
+        link: "https://www.amazon.com.br/Grok-Games-Cascadia-Modelo-Diversos/dp/B0B8PDYQD9/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=M73SRCGN700P&keywords=cascadia&qid=1670338320&s=toys&sprefix=casca%2Ctoys%2C268&sr=1-1&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678"
+      },
+      {
+        name: "A tripulacao",
+        link: "https://www.amazon.com.br/TRIPULA%C3%87%C3%83O-Jogo-Tabuleiro-Devir/dp/B08W1KQFKB/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PZA44850GYL2&keywords=a+tripula%C3%A7%C3%A3o&qid=1670337382&s=toys&sprefix=a+tripulac%2Ctoys%2C226&sr=1-4&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12"
+      },
+      {
+        name: "Ticket to Ride",
+        link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-TTR001-Ticket-Ride/dp/B07BHW19H6?ref_=ast_sto_dp"
+      },
+      {
+        name: "Gloomhaven (eh tao caro que quem comprar vai ter que ser obrigado a jogar comigo e eu animo ajudar a comprar)",
+        link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-GAM10-GLH001-Gloomhaven/dp/B087WDYL5F?ref_=ast_sto_dp"
+
+      }
+    ]
+  },
+  {
+    title: "Bebidas",
+    items: [
+      {
+        name: "Kahlua",
+        link: "https://www.amazon.com.br/Licor-Creme-Caf%C3%A9-Kahlua-750ml/dp/B01N58C3CQ/ref=asc_df_B01N58C3CQ/?tag=googleshopp00-20&linkCode=df0&hvadid=404773626903&hvpos=&hvnetw=g&hvrand=4745045580191494946&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-329122067235&psc=1"
+      }
+    ]
+  }
+  {
     title: "Livros",
     items: [
       {
