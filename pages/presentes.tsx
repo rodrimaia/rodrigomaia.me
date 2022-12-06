@@ -17,36 +17,39 @@ const usesSections: LinksListSection[] = [
     title: "Outros",
     items: [
       {
+        name: "camisetas sempre bom"
+      },
+      {
+        name: "meia branca cano alto macias e confortaveis hmmm",
+        link: "https://www.nike.com.br/meia-nike-everyday-cushioned-6-pares-masculina-015769.html?cor=51&utm_source=googleshop&utm_medium=CPC&utm_campaing=Top_Sellers_PRS&gclid=Cj0KCQiA7bucBhCeARIsAIOwr-_FWs9C79XvGArQUQBO8xOpT8VnqM2cGwq6alXs8c9G7hjsMec7d08aAk-lEALw_wcB"
+      },
+      {
         name: "Calca chino com elastano hering tamanho 50",
         link: "https://produto.mercadolivre.com.br/MLB-1266627460-calca-basica-masculina-chino-com-elastano-hering-_JM?variation=174954007280"
       },
       {
-        name: "Whisky Bourbon Bulleit",
-        link: "https://www.google.com/search?q=Bulleit&oq=bulleit&aqs=chrome.0.69i59j0i433i512j46i433i512l2j0i131i433i512j69i60l3.2224j0j7&sourceid=chrome&ie=UTF-8"
-      },
-      {
-        name: "jarra de café da hario que eu tinha e quebrou"
-      },
-      {
-        name: "Carteira de Couro (normal, bonita, cansei das 'moderninhas')"
-      },
-      {
-        name: "Mais ferramentas de manutenção de casa que eu nao tenho",
-      },
-      {
-        name: "Alguma coisa relacionada a impressao 3D",
-      },
-      {
-        name: "Camisetas lisa branca ou preta pra usar com blazer =D",
+        name: "Mais ferramentas de manutenção de casa/eletronica que eu nao tenho",
       },
       {
         name: "Discos de vinil de algum artista que eu gosto",
         link: "https://www.last.fm/pt/user/driguh/library/albums?from=2020-01-01&to=2022-10-26"
       },
       {
-        name: "Joias",
-        link: "https://www.google.com/search?sxsrf=AOaemvLzt4M7CUujLBkcAvC_IkcrUVpBNA:1640026011643&q=joias+bonitas+mas+que+nao+me+deixam+parecendo+o+johnny+depp&spell=1&sa=X&ved=2ahUKEwj8iuL-hPP0AhV-LLkGHcfqDtkQBSgAegQIARA2&biw=1344&bih=679&dpr=2",
+        name: "outro link pros discos de vinil da minha wishlist ",
+      link: "https://imgur.com/a/xo7PVid"},
+      {
+        name: "mini parafusadeira (tipo essa da bosch)",
+        link: "https://www.amazon.com.br/Parafusadeira-Bateria-Bosch-BIVOLT-Bits/dp/B08K3F6VZB/ref=asc_df_B08K3F6VZB/?tag=googleshopp00-20&linkCode=df0&hvadid=379787210777&hvpos=&hvnetw=g&hvrand=17000147941697629415&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-1259756850872&psc=1"
       },
+      {
+        name: "ou essa da xiaomi",
+        link: "https://produto.mercadolivre.com.br/MLB-2935128152-kit-chave-de-fenda-eletrica-recarregavel-xiaomi-mijia-_JM?matt_tool=73118705&matt_word=&matt_source=google&matt_campaign_id=14302215555&matt_ad_group_id=134553706788&matt_match_type=&matt_network=g&matt_device=c&matt_creative=539425529245&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=607493558&matt_product_id=MLB2935128152&matt_product_partition_id=1469248455037&matt_target_id=aud-615548715344:pla-1469248455037&gclid=Cj0KCQiA7bucBhCeARIsAIOwr-_im2YPkCP2SqKpjShboeUzSDpt3LCgYvBHoDo9SQnOVeeFkzx0EUMaAtGEEALw_wcB"
+      },
+      {
+        name: "uns filamentos 3d bonitoes",
+        link: "https://3dlab.com.br/categoria-produto/filamento-para-impressora-3d/filamento-pla-silk/"
+      }
+
     ],
   },
 ];
