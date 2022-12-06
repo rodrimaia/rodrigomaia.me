@@ -4,6 +4,22 @@ import LinksList, { LinksListSection } from "../components/LinksList";
 
 const usesSections: LinksListSection[] = [
   {
+    title: "O principal presente",
+    items: [
+      {
+        name: "Olha, eu nunca sonhei que eu teria uma vida tao completa e feliz e cheia de realizaçoes como a que eu tenho hoje. Eu tenho muita muita sorte de ter tudo (e todos) que eu preciso . Infelizmente, sabemos que isso é a realidade de uma parcela cada vez menor da população (Especialmente depois desses ultimos anos, né?).Eu vou amar qualquer presente, mas o melhor presente que eu posso ganhar nesse momento é se voce fizesse uma doacao em meu nome para alguma instituição de caridade. Eu vou deixar alguns links abaixo, mas se voce quiser fazer uma doacao em outro lugar, fique a vontade. Eu vou amar qualquer doacao que voce fizer, e vou ficar muito feliz em saber que voce fez uma doacao em meu nome. Obrigado por tudo, e feliz natal! <3",
+      },
+      {
+        name: "CAVIVER",
+        link: "https://doebem.org.br/caviver/"
+      },
+      {
+        name: "DARA",
+        link: "https://doebem.org.br/dara/"
+      }
+    ]
+  },
+  {
     title: "Livros",
     items: [
       {
