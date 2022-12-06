@@ -33,20 +33,6 @@ const usesSections: LinksListSection[] = [
     title: "Outros",
     items: [
       {
-        name: "camisetas sempre bom"
-      },
-      {
-        name: "meia branca cano alto macias e confortaveis hmmm",
-        link: "https://www.nike.com.br/meia-nike-everyday-cushioned-6-pares-masculina-015769.html?cor=51&utm_source=googleshop&utm_medium=CPC&utm_campaing=Top_Sellers_PRS&gclid=Cj0KCQiA7bucBhCeARIsAIOwr-_FWs9C79XvGArQUQBO8xOpT8VnqM2cGwq6alXs8c9G7hjsMec7d08aAk-lEALw_wcB"
-      },
-      {
-        name: "Calca chino com elastano hering tamanho 50",
-        link: "https://produto.mercadolivre.com.br/MLB-1266627460-calca-basica-masculina-chino-com-elastano-hering-_JM?variation=174954007280"
-      },
-      {
-        name: "Mais ferramentas de manutenção de casa/eletronica que eu nao tenho",
-      },
-      {
         name: "Discos de vinil de algum artista que eu gosto",
         link: "https://www.last.fm/pt/user/driguh/library/albums?from=2020-01-01&to=2022-10-26"
       },
@@ -64,7 +50,21 @@ const usesSections: LinksListSection[] = [
       {
         name: "uns filamentos 3d bonitoes",
         link: "https://3dlab.com.br/categoria-produto/filamento-para-impressora-3d/filamento-pla-silk/"
-      }
+      },
+            {
+        name: "camisetas sempre bom"
+      },
+      {
+        name: "meia branca cano alto macias e confortaveis hmmm",
+        link: "https://www.nike.com.br/meia-nike-everyday-cushioned-6-pares-masculina-015769.html?cor=51&utm_source=googleshop&utm_medium=CPC&utm_campaing=Top_Sellers_PRS&gclid=Cj0KCQiA7bucBhCeARIsAIOwr-_FWs9C79XvGArQUQBO8xOpT8VnqM2cGwq6alXs8c9G7hjsMec7d08aAk-lEALw_wcB"
+      },
+      {
+        name: "Calca chino com elastano hering tamanho 50",
+        link: "https://produto.mercadolivre.com.br/MLB-1266627460-calca-basica-masculina-chino-com-elastano-hering-_JM?variation=174954007280"
+      },
+      {
+        name: "Mais ferramentas de manutenção de casa/eletronica que eu nao tenho",
+      },
 
     ],
   },
