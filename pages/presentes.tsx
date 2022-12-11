@@ -28,12 +28,40 @@ const usesSections: LinksListSection[] = [
         link: "https://www.amazon.com.br/Wingspan-Jogo-de-tabuleiro-Grok/dp/B07PT68643"
       },
       {
+        name: "Chronicles of Crime",
+        link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-COC001-Chronicles-Crime/dp/B082578W25"
+      },
+      {
         name: "Cascadia",
         link: "https://www.amazon.com.br/Grok-Games-Cascadia-Modelo-Diversos/dp/B0B8PDYQD9/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=M73SRCGN700P&keywords=cascadia&qid=1670338320&s=toys&sprefix=casca%2Ctoys%2C268&sr=1-1&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678"
       },
       {
         name: "A tripulacao",
         link: "https://www.amazon.com.br/TRIPULA%C3%87%C3%83O-Jogo-Tabuleiro-Devir/dp/B08W1KQFKB/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1PZA44850GYL2&keywords=a+tripula%C3%A7%C3%A3o&qid=1670337382&s=toys&sprefix=a+tripulac%2Ctoys%2C226&sr=1-4&ufe=app_do%3Aamzn1.fos.db68964d-7c0e-4bb2-a95c-e5cb9e32eb12"
+      },
+      {
+        name: "Sherlock Holmes",
+        link: "https://www.mundogalapagos.com.br/sherlock-holmes-consulting-detective-os-assassinatos-do-tamisa-e-outros-casos/produto/SHC001"
+      },
+      {
+        name: "Terraforming Mars",
+        link: "https://www.amazon.com.br/Meeple-BR-Jogos-751320317506-Terraforming/dp/B07DCZZ8QD/ref=sr_1_4?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1FK78WQ8TQ2T4&keywords=terraforming+mars&qid=1670796024&s=toys&sprefix=terraforming+m%2Ctoys%2C295&sr=1-4&ufe=app_do%3Aamzn1.fos.e05b01e0-91a7-477e-a514-15a32325a6d6"
+      },
+      {
+        name: "Mansions of Madness",
+        link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-MOM001-Mansions-Madness/dp/B07CLGVK44/ref=asc_df_B07CLGVK44/?tag=googleshopp00-20&linkCode=df0&hvadid=379699826596&hvpos=&hvnetw=g&hvrand=9880358519994071747&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-616496505246&psc=1"
+      },
+      {
+        name: "Ark Nova",
+        link: "https://grokgames.com.br/loja/ark-nova/"
+      },
+      {
+        name: "MicroMacro",
+        link: "https://www.amazon.com.br/MicroMacro-Cidade-Crime-Gal%C3%A1pagos-Multicolor/dp/B09G3J45W2/ref=asc_df_B09G3J45W2/?tag=googleshopp00-20&linkCode=df0&hvadid=393609811349&hvpos=&hvnetw=g&hvrand=1396745862847367808&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001566&hvtargid=pla-1506729643157&psc=1",
+      },
+      {
+        name: "Spirit Island",
+        link: "https://bravojogos.com.br/jogos-de-tabuleiro-e-cardgames/jogo-spirit-island--p?gclid=Cj0KCQiAnNacBhDvARIsABnDa68E3tOqyKcfTuN-7d9ozvEASoiq-6HbxmdRjl8MJWDm8DzUA9Zmp_waAjxIEALw_wcB"
       },
       {
         name: "Root",
