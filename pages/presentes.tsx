@@ -32,6 +32,10 @@ const usesSections: LinksListSection[] = [
         link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-COC001-Chronicles-Crime/dp/B082578W25"
       },
       {
+        name: "Detective",
+        link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-DET001-Detective/dp/B08CS7QHFB/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=82IXCP6EIGHR&keywords=detective&qid=1670800402&s=toys&sprefix=detectiv%2Ctoys%2C346&sr=1-1&ufe=app_do%3Aamzn1.fos.4bb5663b-6f7d-4772-84fa-7c7f565ec65b"
+      },
+      {
         name: "Cascadia",
         link: "https://www.amazon.com.br/Grok-Games-Cascadia-Modelo-Diversos/dp/B0B8PDYQD9/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=M73SRCGN700P&keywords=cascadia&qid=1670338320&s=toys&sprefix=casca%2Ctoys%2C268&sr=1-1&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678"
       },
@@ -72,7 +76,7 @@ const usesSections: LinksListSection[] = [
         link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-TTR001-Ticket-Ride/dp/B07BHW19H6?ref_=ast_sto_dp"
       },
       {
-        name: "Gloomhaven (eh tao caro que quem comprar vai ter que ser obrigado a jogar comigo e eu animo ajudar a comprar)",
+        name: "Gloomhaven (eh tao caro e denso que quem comprar vai ter que ser obrigado a jogar comigo e eu animo ajudar a comprar)",
         link: "https://www.amazon.com.br/Gal%C3%A1pagos-Jogos-GAM10-GLH001-Gloomhaven/dp/B087WDYL5F?ref_=ast_sto_dp"
 
       }
