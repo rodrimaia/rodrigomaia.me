@@ -3,6 +3,7 @@ import styles from "./sudoku.module.css";
 import axios from "axios";
 import cx from "classnames";
 import Confetti from "react-confetti";
+import { Spinner } from '@chakra-ui/react'
 
 type ValidationResult = {
   failedRows: number[];
@@ -204,7 +205,9 @@ const Sudoku = () => {
       />
       <div className={styles.board}>
         {state.isLoading ? (
-          <div> Loading...</div>
+          <div className={styles.row}>
+            <Spinner color="pink" size="xl" />
+          </div>
         ) : (
           state.board.map((row, i) => {
             return (
