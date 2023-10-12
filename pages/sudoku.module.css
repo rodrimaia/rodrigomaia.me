@@ -4,11 +4,13 @@
 
 .board {
   padding: 0 4rem;
+  margin-top: 2rem;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .row:nth-child(3),
@@ -54,9 +56,10 @@
 }
 
 .finishedMessage {
-  margin-top: 2rem;
+  margin-top: 3rem;
   font-size: 3rem;
   background: linear-gradient(to right, #00c8ff, #f700de);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-align: center;
 }
