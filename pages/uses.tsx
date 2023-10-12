@@ -48,7 +48,8 @@ const usesSections: LinksListSection[] = [
       {
         name: "Dozer",
         link: "https://github.com/Mortennn/Dozer",
-        description: "Hide menu bar on macOS. (must have for the new macbook pro with the notch)",
+        description:
+          "Hide menu bar on macOS. (must have for the new macbook pro with the notch)",
       },
     ],
   },

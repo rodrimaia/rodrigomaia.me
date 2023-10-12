@@ -47,7 +47,6 @@ const board = [
 });
 
 test('get quadrants', () => {
-
     const result = findQuadrant(0,0)
     expect(result).toEqual(0)
 })
@@ -83,3 +82,14 @@ const board = [
   const { failedQuadrants} = validateBoard(board);
   expect(failedQuadrants).toEqual([0, 2]);
 });
+
+test("validates finished board", () => {
+  const board = [
+    [4, 3, 5, 2, 6, 9, 7, 8, 1],
+  ]
+  const solution = [
+    [4, 3, 5, 2, 6, 9, 7, 8, 1],
+  ]
+  const { finished } = validateBoard(board, solution);
+  expect(finished).toEqual(true);
+})

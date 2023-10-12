@@ -30,10 +30,11 @@ const LinksList = ({
 }) => {
   return (
     <Box key={section.title} pb={5}>
-      <Heading as="h2" size="lg" pb={3}>
-        {" "}
-        {section.title}{" "}
-      </Heading>
+      {section.title && (
+        <Heading as="h2" size="lg" pb={3}>
+          {section.title}
+        </Heading>
+      )}
       <UnorderedList>
         {section.items.map((thing) => (
           <ListItem key={thing.name} py={2}>
@@ -51,8 +52,14 @@ const LinksList = ({
                   {thing.name} <ExternalLinkIcon mx="2px" />
                 </Link>
               ) : (
-                  <span style={thing.strikethrough ? { textDecoration: "line-through" } : undefined }>
-                    {thing.name}
+                <span
+                  style={
+                    thing.strikethrough
+                      ? { textDecoration: "line-through" }
+                      : undefined
+                  }
+                >
+                  {thing.name}
                 </span>
               )}
               {thing.description && `: `}
