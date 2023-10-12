@@ -153,7 +153,7 @@ const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         isLoading: false,
-        board: [...action.solution],
+        board: [...action.board],
         original: [...action.board],
         solution: [...action.solution],
       };
