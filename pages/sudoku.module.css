@@ -15,15 +15,14 @@
 
 .row:nth-child(3),
 .row:nth-child(6) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .cell {
   border: 1px solid white;
   text-align: center;
-  min-height: 3rem;
-  line-height: 3rem;
-  font-size: 2rem;
+  max-height: 2rem;
+  line-height: 2rem;
   max-width: 3rem;
   color: #00c8ff;
 
@@ -34,7 +33,7 @@
   &.failed {
     border: 1px solid red;
   }
-  
+
   &.finished {
     border: 1px solid rgb(0, 203, 0);
   }
@@ -53,13 +52,38 @@
 .input {
   all: unset;
   cursor: text;
+  max-width: 2rem;
+  max-height: 2rem;
 }
 
 .finishedMessage {
   margin-top: 3rem;
-  font-size: 3rem;
+  font-size: 1.6rem;
   background: linear-gradient(to right, #00c8ff, #f700de);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
+}
+
+@media (min-width: 768px) {
+  .row:nth-child(3),
+  .row:nth-child(6) {
+    margin-bottom: 1rem;
+  }
+
+  .cell {
+    min-height: 3rem;
+    line-height: 3rem;
+    font-size: 2rem;
+  }
+  .input {
+    max-width: 3rem;
+   max-height: 3rem;
+  }
+
+
+  .finishedMessage {
+    margin-top: 3rem;
+    font-size: 3rem;
+  }
 }

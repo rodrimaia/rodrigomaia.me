@@ -232,7 +232,6 @@ const Sudoku = () => {
                         className={styles.input}
                         type="number"
                         defaultValue={column || ""}
-                        style={{ width: "3rem" }}
                         readOnly={isDefault}
                         disabled={isDefault}
                         onBlur={(e) => {

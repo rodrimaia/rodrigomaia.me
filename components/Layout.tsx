@@ -57,7 +57,7 @@ export const Layout: React.FC = ({ children }) => {
     >
       <Head>
         <title>Rodrigo Maia</title>
-        <meta name="description" content="Rodrigo's personal site" />
+        <meta name="description" content="Rodrigo Maia's personal website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
