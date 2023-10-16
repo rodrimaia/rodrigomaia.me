@@ -1,4 +1,4 @@
-import { findQuadrant, validateBoard } from "../pages/sudoku";
+import { findQuadrant, validateBoard } from "./sudoku";
 
 test("validates rows", () => {
   const board = [[0, 0, 1, 2, 1]];

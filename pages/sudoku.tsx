@@ -3,90 +3,8 @@ import styles from "./sudoku.module.css";
 import axios from "axios";
 import cx from "classnames";
 import Confetti from "react-confetti";
-import { Spinner } from '@chakra-ui/react'
-
-type ValidationResult = {
-  failedRows: number[];
-  failedColumns: number[];
-  failedQuadrants: number[];
-  finished: boolean;
-};
-
-export function findQuadrant(row: number, column: number) {
-  let [columnPart, rowPart] = [0, 0];
-  if ([3, 4, 5].includes(column)) {
-    columnPart = 1;
-  }
-  if ([6, 7, 8].includes(column)) {
-    columnPart = 2;
-  }
-  if ([3, 4, 5].includes(row)) {
-    rowPart = 3;
-  }
-
-  if ([6, 7, 8].includes(row)) {
-    rowPart = 6;
-  }
-
-  return columnPart + rowPart;
-}
-
-export const validateBoard = (
-  board: number[][],
-  solution?: number[][]
-): ValidationResult => {
-  let failedRows: number[] = [];
-  let failedColumns: number[] = [];
-  let failedQuadrants: number[] = [];
-
-  if (solution && JSON.stringify(board) === JSON.stringify(solution)) {
-    return {
-      failedColumns: [],
-      failedQuadrants: [],
-      failedRows: [],
-      finished: true,
-    };
-  }
-
-  board.forEach((row, rowIndex) => {
-    const rowWithoutZeros = row.filter((r) => r !== 0);
-    if (new Set(rowWithoutZeros).size !== rowWithoutZeros.length) {
-      failedRows.push(rowIndex);
-    }
-  });
-
-  for (let i = 0; i < board[0].length; i++) {
-    const columnValues = board.map((row) => row[i]).filter((r) => r !== 0);
-
-    if (new Set(columnValues).size !== columnValues.length) {
-      failedColumns.push(i);
-    }
-  }
-  let quadrants: Record<number, number[]> = {};
-
-  for (let i = 0; i < board.length; i++) {
-    for (let j = 0; j < board[0].length; j++) {
-      const value = board[i][j];
-      if (value !== 0) {
-        const quadrant = findQuadrant(i, j);
-        const quadrantRecord = quadrants[quadrant];
-        if (quadrantRecord) {
-          quadrantRecord.push(value);
-        } else {
-          quadrants[quadrant] = [value];
-        }
-      }
-    }
-  }
-
-  for (const [quadrant, numbers] of Object.entries(quadrants)) {
-    if (new Set(numbers).size !== numbers.length) {
-      failedQuadrants.push(Number.parseInt(quadrant));
-    }
-  }
-
-  return { failedRows, failedColumns, failedQuadrants, finished: false };
-};
+import { Spinner } from "@chakra-ui/react";
+import { validateBoard, findQuadrant } from "../lib/sudoku";
 
 type State = {
   board: number[][];
@@ -220,34 +138,24 @@ const Sudoku = () => {
                     state.failedColumns.includes(j) ||
                     state.failedQuadrants.includes(quadrant);
                   return (
-                    <div
-                      className={cx(styles.cell, {
-                        [styles.default]: isDefault,
-                        [styles.failed]: isFailed,
-                        [styles.finished]: state.finished,
-                      })}
-                      key={i + "-" + j}
-                    >
-                      <input
-                        className={styles.input}
-                        type="number"
-                        defaultValue={column || ""}
-                        readOnly={isDefault}
-                        disabled={isDefault}
-                        onBlur={(e) => {
-                          const newValueString = e.currentTarget.value;
-                          const newValue = Number.parseInt(newValueString);
-                          dispatch({
-                            type: "changedValue",
-                            payload: {
-                              row: i,
-                              column: j,
-                              value: newValue || 0,
-                            },
-                          });
-                        }}
-                      />
-                    </div>
+                    <SudokuCell
+                      key={i + "-" + "j"}
+                      isDefault={isDefault}
+                      isFinished={state.finished}
+                      isFailed={isFailed}
+                      value={column}
+                      onBlur={(newValueString: string) => {
+                        const newValue = Number.parseInt(newValueString);
+                        dispatch({
+                          type: "changedValue",
+                          payload: {
+                            row: i,
+                            column: j,
+                            value: newValue || 0,
+                          },
+                        });
+                      }}
+                    />
                   );
                 })}
               </div>
@@ -276,3 +184,40 @@ interface Grid {
   value: number[][];
   solution: number[][];
 }
+
+type SudokuCellProps = {
+  value: number;
+  isDefault: boolean;
+  isFinished: boolean;
+  isFailed: boolean;
+  onBlur: (newValue: string) => void;
+};
+
+const SudokuCell = ({
+  value,
+  isDefault,
+  isFinished,
+  isFailed,
+  onBlur,
+}: SudokuCellProps) => {
+  return (
+    <div
+      className={cx(styles.cell, {
+        [styles.default]: isDefault,
+        [styles.failed]: isFailed,
+        [styles.finished]: isFinished,
+      })}
+    >
+      <input
+        className={styles.input}
+        type="number"
+        defaultValue={value || ""}
+        readOnly={isDefault}
+        disabled={isDefault}
+        onBlur={(e) => {
+          onBlur(e.target.value);
+        }}
+      />
+    </div>
+  );
+};
