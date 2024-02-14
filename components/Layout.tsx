@@ -18,6 +18,7 @@ import NextLink from "next/link";
 export const linksTopbar = [
   { href: "/", label: "home" },
   { href: "/uses", label: "uses" },
+  { href: "/blog", label: "blog (pt-br)" },
   { href: "/experiments", label: "experiments" },
   // { href: "/resume.pdf", label: "resume", isExternal: true },
   { href: "http://github.com/rodrimaia", label: "github", isExternal: true },
@@ -28,46 +29,49 @@ export const linksTopbar = [
   },
 ];
 
-export const TextLink = ({ label, isExternal }: { label: string, isExternal: boolean }) => (
+export const TextLink = ({
+  label,
+  isExternal,
+}: {
+  label: string;
+  isExternal: boolean;
+}) => (
   <Text fontSize="2xl" letterSpacing="widest" fontWeight="semibold">
-    {label}{isExternal && <ExternalLinkIcon mx="2px" />}
+    {label}
+    {isExternal && <ExternalLinkIcon mx="2px" />}
   </Text>
 );
 
 export const Layout: React.FC = ({ children }) => {
   const links = linksTopbar.map((l) => (
-    <NextLink key={l.href} href={l.href} passHref>
-      <Link
-        isExternal={l.isExternal}
-        onClick={() => {
-          splitbee.track(`click-${l.label}`);
-        }}
-      >
-        <TextLink label={l.label} isExternal={!!l.isExternal} />
-      </Link>
-    </NextLink>
+    <Link key={l.href} isExternal={l.isExternal} href={l.href}>
+      <TextLink label={l.label} isExternal={!!l.isExternal} />
+    </Link>
   ));
 
   return (
-    <Box
-      bg="haiti"
-      minHeight="100vh"
-      minWidth="100vw"
-      textColor={"lightGray"}
-    >
+    <Box bg="haiti" minHeight="100vh" minWidth="100vw" textColor={"lightGray"}>
       <Head>
         <title>Rodrigo Maia</title>
         <meta name="description" content="Rodrigo Maia's personal website" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Box 
-      as="main"
-      >
-        <Flex display={{ base: "none", md: "flex" }} pl="7" py="5" sx={{ gap: "24px" }}>
+      <Box as="main">
+        <Flex
+          display={{ base: "none", md: "flex" }}
+          pl="7"
+          py="5"
+          sx={{ gap: "24px" }}
+        >
           {links}
         </Flex>
-        <Flex display={{ base: "flex", md: "none" }} px="7" py="5" justify={"flex-end"} >
+        <Flex
+          display={{ base: "flex", md: "none" }}
+          px="7"
+          py="5"
+          justify={"flex-end"}
+        >
           <Box>
             <Menu>
               <MenuButton
@@ -78,24 +82,19 @@ export const Layout: React.FC = ({ children }) => {
               />
               <MenuList>
                 {linksTopbar.map((l) => (
-                    <NextLink key={l.href} href={l.href} passHref>
-                      <Link
-                        isExternal={l.isExternal}
-                        onClick={() => {
-                          splitbee.track(`click-${l.label}`);
-                        }}
+                  <Link key={l.href} isExternal={l.isExternal} href={l.href}>
+                    <MenuItem key={l.href}>
+                      <Text
+                        fontSize="2xl"
+                        color="haiti"
+                        letterSpacing="widest"
+                        fontWeight="semibold"
                       >
-                  <MenuItem key={l.href}>
-                        <Text
-                          fontSize="2xl"
-                          color="haiti"
-                          letterSpacing="widest"
-                          fontWeight="semibold"
-                        >
-                          {l.label}{l.isExternal && <ExternalLinkIcon mx="2px" />}
-                        </Text></MenuItem>
-                      </Link>
-                    </NextLink>
+                        {l.label}
+                        {l.isExternal && <ExternalLinkIcon mx="2px" />}
+                      </Text>
+                    </MenuItem>
+                  </Link>
                 ))}
               </MenuList>
             </Menu>
