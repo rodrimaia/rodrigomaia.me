@@ -7,7 +7,6 @@ import {
   ListItem,
   Link,
 } from "@chakra-ui/react";
-import splitbee from "@splitbee/web";
 
 export type ListItem = {
   name: string;
@@ -44,9 +43,6 @@ const LinksList = ({
                 <Link
                   color="blue"
                   href={thing.link}
-                  onClick={() =>
-                    splitbee.track(`click-${pageName}-${thing.name}`)
-                  }
                   isExternal
                 >
                   {thing.name} <ExternalLinkIcon mx="2px" />

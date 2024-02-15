@@ -11,9 +11,7 @@ import {
   MenuList,
   Text,
 } from "@chakra-ui/react";
-import splitbee from "@splitbee/web";
 import Head from "next/head";
-import NextLink from "next/link";
 
 export const linksTopbar = [
   { href: "/", label: "home" },

@@ -16,7 +16,7 @@
     "@emotion/styled": "^11.11.0",
     "@fontsource/fira-code": "^4.5.13",
     "@fontsource/open-sans": "^4.5.14",
-    "@splitbee/web": "^0.3.0",
+    "@vercel/analytics": "^1.1.4",
     "axios": "^1.6.7",
     "classnames": "^2.5.1",
     "date-fns": "^3.3.1",
