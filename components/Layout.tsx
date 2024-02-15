@@ -18,7 +18,7 @@ import NextLink from "next/link";
 export const linksTopbar = [
   { href: "/", label: "home" },
   { href: "/uses", label: "uses" },
-  { href: "/blog", label: "blog (pt-br)" },
+  { href: "/blog", label: "blog(pt)" },
   { href: "/experiments", label: "experiments" },
   // { href: "/resume.pdf", label: "resume", isExternal: true },
   { href: "http://github.com/rodrimaia", label: "github", isExternal: true },
