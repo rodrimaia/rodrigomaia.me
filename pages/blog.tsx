@@ -31,6 +31,7 @@ export default function Index({ posts }: { posts: Post[] }) {
   }
   return (
     <Container maxW="container.sm">
+      <Text my={8}>Some notes I keep for myself that maybe can be useful for someone else...</Text>
       <VStack>
         {posts.map((post) => (
           <>
