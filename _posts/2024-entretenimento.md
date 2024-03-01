@@ -12,10 +12,10 @@ Uma tentativa de lista de filmes, séries, músicas, outras coisas que vi/ouvi e
 
 **Mr. & Mrs. Smith (2024)** - Sou fã do childish gambino, não tem jeito.
 
-**True Detective - Season 4 (2024)** 
-
 **[Esse vídeo do Casey Neistat](https://www.youtube.com/watch?v=9IiTdSnmS7E)** 
 
 ### Gostei ou achei OK
 
 **Poor Things** - Um bom filme de se ver no cinema.  
+
+**True Detective - Season 4 (2024)** 
