@@ -10,7 +10,9 @@ Uma tentativa de lista de filmes, séries, músicas, outras coisas que vi/ouvi e
 
 *Não necessariamente MUDARAM MINHA VIDA mas foram legais e eu lembro com certo carinho.*
 
-**Mr. & Mrs. Smith (2024)** - Sou fã do childish gambino, não tem jeito.
+**Mr. & Mrs. Smith (2024)** - childish gambino, não tem jeito.
+
+**Vida a Bordo (Below Deck)** - gosto de iates e gosto de reality shows. 🤷‍
 
 **[Esse vídeo do Casey Neistat](https://www.youtube.com/watch?v=9IiTdSnmS7E)** 
 
