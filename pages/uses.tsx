@@ -40,10 +40,10 @@ const usesSections: LinksListSection[] = [
         description: "A better launcher than Alfred and Spotlight.",
       },
       {
-        name: "Notion",
-        link: "https://www.notion.so/",
+        name: "Obsidian",
+        link: "https://obsidian.md/",
         description:
-          "It made me switch from Emacs Org Mode. Still not sure if it was a good decision.",
+          "I use it to take notes and to keep track of my projects. Syncing with a custom plugin hosted on my own server.",
       },
       {
         name: "Dozer",
@@ -57,14 +57,9 @@ const usesSections: LinksListSection[] = [
     title: "Coding",
     items: [
       {
-        name: "VSCode",
-        link: "https://code.visualstudio.com/",
-        description: "Ok, I confess I am using vscode 100% of the time.",
-      },
-      {
-        name: "Github Copilot",
-        link: "https://copilot.github.com/",
-        description: "IF YOU ARE NOT USING IT, YOU ARE WRONG.",
+        name: "Cursor",
+        link: "https://www.cursor.com/",
+        description: "I am using it to write this document.",
       },
       {
         name: "Outrun night theme",
