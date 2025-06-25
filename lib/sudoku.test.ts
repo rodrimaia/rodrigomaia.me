@@ -1,14 +1,14 @@
-import { findQuadrant, validateBoard } from "./sudoku";
+import { findQuadrant, SudokuBoard, validateBoard } from "./sudoku";
 
 test("validates rows", () => {
-  const board = [[0, 0, 1, 2, 1]];
+  const board: SudokuBoard = [[0, 0, 1, 2, 1]];
 
   const { failedRows } = validateBoard(board);
   expect(failedRows).toEqual([0]);
 });
 
 test("validates columns", () => {
-  const board = [
+  const board: SudokuBoard = [
     [0, 0, 1, 2, 7],
     [0, 0, 3, 2, 8],
   ];
@@ -19,7 +19,7 @@ test("validates columns", () => {
 });
 
 test("validates columns and rows", () => {
-  const board = [
+  const board: SudokuBoard = [
     [0, 0, 1, 2, 2],
     [0, 0, 3, 2, 8],
   ];
@@ -30,7 +30,7 @@ test("validates columns and rows", () => {
 });
 
 test("validates row real scenario", () => {
-const board = [
+const board: SudokuBoard = [
   [0, 0, 0, 0, 0, 8, 0, 5, 7],
   [5, 1, 3, 0, 7, 0, 1, 2, 0],
   [1, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -67,7 +67,7 @@ test('get quadrants', () => {
 })
 
 test("validates quadrant real scenario", () => {
-const board = [
+const board: SudokuBoard = [
   [0, 0, 0, 0, 0, 8, 0, 5, 7],
   [5, 1, 3, 0, 7, 0, 1, 2, 5],
   [1, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -84,10 +84,10 @@ const board = [
 });
 
 test("validates finished board", () => {
-  const board = [
+  const board: SudokuBoard = [
     [4, 3, 5, 2, 6, 9, 7, 8, 1],
   ]
-  const solution = [
+  const solution: SudokuBoard = [
     [4, 3, 5, 2, 6, 9, 7, 8, 1],
   ]
   const { finished } = validateBoard(board, solution);

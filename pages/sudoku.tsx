@@ -4,12 +4,12 @@ import axios from "axios";
 import cx from "classnames";
 import Confetti from "react-confetti";
 import { Spinner } from "@chakra-ui/react";
-import { validateBoard, findQuadrant } from "../lib/sudoku";
+import { validateBoard, findQuadrant, SudokuBoard, CellValue } from "../lib/sudoku";
 
 type State = {
-  board: number[][];
-  original: number[][];
-  solution?: number[][];
+  board: SudokuBoard;
+  original: SudokuBoard;
+  solution?: SudokuBoard;
   isLoading: boolean;
   failedRows: number[];
   failedColumns: number[];
@@ -41,8 +41,8 @@ type NewValueAction = {
 
 type NewBoardAction = {
   type: "newBoard";
-  board: number[][];
-  solution: number[][];
+  board: SudokuBoard;
+  solution: SudokuBoard;
 };
 
 type Action = NewValueAction | NewBoardAction;
@@ -51,9 +51,9 @@ const reducer = (state: State, action: Action): State => {
   switch (action.type) {
     case "changedValue":
       const { row, column, value } = action.payload;
-      const newBoard = state.board.map((r, i) => {
+      const newBoard: SudokuBoard = state.board.map((r, i) => {
         if (i === row) {
-          return r.map((c, j) => (j === column ? value : c));
+          return r.map((c, j) => (j === column ? value as CellValue : c));
         } else {
           return r;
         }
@@ -63,18 +63,18 @@ const reducer = (state: State, action: Action): State => {
       return {
         ...state,
         board: newBoard,
-        failedColumns,
-        failedRows,
-        failedQuadrants,
+        failedColumns: [...failedColumns],
+        failedRows: [...failedRows],
+        failedQuadrants: [...failedQuadrants],
         finished,
       };
     case "newBoard":
       return {
         ...state,
         isLoading: false,
-        board: [...action.board],
-        original: [...action.board],
-        solution: [...action.solution],
+        board: [...action.board] as SudokuBoard,
+        original: [...action.board] as SudokuBoard,
+        solution: [...action.solution] as SudokuBoard,
       };
   }
 };
@@ -181,8 +181,8 @@ interface Newboard {
 }
 
 interface Grid {
-  value: number[][];
-  solution: number[][];
+  value: SudokuBoard;
+  solution: SudokuBoard;
 }
 
 type SudokuCellProps = {
