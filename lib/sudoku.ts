@@ -9,7 +9,6 @@ interface ValidationResult {
   readonly finished: boolean;
 }
 
-const BOARD_SIZE = 9;
 const QUADRANT_SIZE = 3;
 const EMPTY_CELL: CellValue = 0;
 
@@ -21,13 +20,12 @@ class InvalidBoardError extends Error {
 }
 
 function isValidBoard(board: unknown): board is SudokuBoard {
-  if (!Array.isArray(board) || board.length !== BOARD_SIZE) {
+  if (!Array.isArray(board)) {
     return false;
   }
   
   return board.every(row => 
     Array.isArray(row) && 
-    row.length === BOARD_SIZE && 
     row.every(cell => typeof cell === 'number' && cell >= 0 && cell <= 9)
   );
 }
@@ -79,11 +77,12 @@ function findFailedRows(board: SudokuBoard): readonly number[] {
 }
 
 function findFailedColumns(board: SudokuBoard): readonly number[] {
-  return Array.from({ length: BOARD_SIZE }, (_, colIndex) => colIndex)
+  const maxColLength = Math.max(...board.map(row => row.length));
+  return Array.from({ length: maxColLength }, (_, colIndex) => colIndex)
     .filter(colIndex => {
       const columnValues = board
         .map(row => row[colIndex])
-        .filter(cell => cell !== EMPTY_CELL);
+        .filter(cell => cell !== undefined && cell !== EMPTY_CELL);
       return hasDuplicates(columnValues);
     });
 }
@@ -98,11 +97,13 @@ function findFailedQuadrants(board: SudokuBoard): readonly number[] {
 
 function collectQuadrantValues(board: SudokuBoard): Record<QuadrantIndex, CellValue[]> {
   const quadrantValues: Record<QuadrantIndex, CellValue[]> = {} as Record<QuadrantIndex, CellValue[]>;
+  const boardSize = board.length;
+  const maxColLength = Math.max(...board.map(row => row.length));
 
-  for (let rowIndex = 0; rowIndex < BOARD_SIZE; rowIndex++) {
-    for (let colIndex = 0; colIndex < BOARD_SIZE; colIndex++) {
-      const cellValue = board[rowIndex][colIndex];
-      if (cellValue !== EMPTY_CELL) {
+  for (let rowIndex = 0; rowIndex < boardSize; rowIndex++) {
+    for (let colIndex = 0; colIndex < maxColLength; colIndex++) {
+      const cellValue = board[rowIndex]?.[colIndex];
+      if (cellValue !== undefined && cellValue !== EMPTY_CELL) {
         const quadrantIndex = findQuadrant(rowIndex, colIndex);
         if (!quadrantValues[quadrantIndex]) {
           quadrantValues[quadrantIndex] = [];
@@ -127,16 +128,16 @@ export function findQuadrant(row: number, column: number): QuadrantIndex {
 }
 
 // Utility functions for additional functionality
-export const createEmptyBoard = (): SudokuBoard => 
-  Array.from({ length: BOARD_SIZE }, () => 
-    Array.from({ length: BOARD_SIZE }, () => EMPTY_CELL)
+export const createEmptyBoard = (size: number = 9): SudokuBoard => 
+  Array.from({ length: size }, () => 
+    Array.from({ length: size }, () => EMPTY_CELL)
   );
 
 export const isBoardComplete = (board: SudokuBoard): boolean => 
   board.every(row => row.every(cell => cell !== EMPTY_CELL));
 
 export const getBoardStatistics = (board: SudokuBoard) => {
-  const totalCells = BOARD_SIZE * BOARD_SIZE;
+  const totalCells = board.length * Math.max(...board.map(row => row.length));
   const filledCells = board.flat().filter(cell => cell !== EMPTY_CELL).length;
   const emptyCells = totalCells - filledCells;
   
