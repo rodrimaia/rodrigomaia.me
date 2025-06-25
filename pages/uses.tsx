@@ -59,7 +59,7 @@ const usesSections: LinksListSection[] = [
       {
         name: "Cursor",
         link: "https://www.cursor.com/",
-        description: "I am using it to write this document.",
+        description: "Using it to write this document.",
       },
       {
         name: "Outrun night theme",

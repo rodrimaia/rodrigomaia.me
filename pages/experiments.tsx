@@ -29,7 +29,7 @@ const ExperimentsPage = () => {
       </Box>
 
       {experiments.map((section) => (
-        <LinksList pageName="uses" key={section.title} section={section} />
+        <LinksList pageName={section.title ?? ""} key={section.title} section={section} />
       ))}
     </Container>
   );
