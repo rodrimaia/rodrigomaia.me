@@ -16,18 +16,21 @@ const usesSections: LinksListSection[] = [
         link: "https://www.geniodesks.com.br/",
         description:
           "I usually try to not stay sitting on my desk for too long. Focus on the word 'try'.",
+        isExternal: true,
       },
       {
         name: "ZSA Moonlander",
         link: "https://www.zsa.io/moonlander/",
         description:
           "if you see some typos in this document, the keyboard  is probably the one to blabe.",
+        isExternal: true,
       },
       {
         name: `Monitor 165Hz 27" Dell S2721DGF`,
         link: "https://www.dell.com/pt-br/shop/monitor-165hz-gamer-27-dell-s2721dgf/apd/210-bbmu/monitores-e-acess%C3%B3rios",
         description:
           "Work and play monitor. (by play I mean figuring out how to survive on Oxygen Not Included)",
+        isExternal: true,
       },
     ],
   },
@@ -38,18 +41,21 @@ const usesSections: LinksListSection[] = [
         name: "Raycast",
         link: "https://raycast.com/",
         description: "A better launcher than Alfred and Spotlight.",
+        isExternal: true,
       },
       {
         name: "Obsidian",
         link: "https://obsidian.md/",
         description:
           "I use it to take notes and to keep track of my projects. Syncing with a custom plugin hosted on my own server.",
+        isExternal: true,
       },
       {
         name: "Dozer",
         link: "https://github.com/Mortennn/Dozer",
         description:
           "Hide menu bar on macOS. (must have for the new macbook pro with the notch)",
+        isExternal: true,
       },
     ],
   },
@@ -60,16 +66,19 @@ const usesSections: LinksListSection[] = [
         name: "Cursor",
         link: "https://www.cursor.com/",
         description: "Using it to write this document.",
+        isExternal: true,
       },
       {
         name: "Outrun night theme",
         link: "https://github.com/samrap/outrun-theme-vscode",
         description: "I may or may not have copied my website theme from it.",
+        isExternal: true,
       },
       {
         name: "asdf",
         link: "https://github.com/asdf-vm/asdf",
         description: "Finally a multi-language version tool to rule them all.",
+        isExternal: true,
       },
     ],
   },
@@ -86,7 +95,7 @@ const UsesPage = () => {
       </Box>
 
       {usesSections.map((section) => (
-        <LinksList pageName="uses" key={section.title} section={section} />
+        <LinksList key={section.title} section={section} />
       ))}
     </Container>
   );

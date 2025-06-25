@@ -13,7 +13,10 @@ export type ListItem = {
   link?: string;
   description?: string;
   strikethrough?: boolean;
-};
+} & (
+  | { link: string; isExternal: boolean }
+  | { link?: undefined }
+);
 
 export type LinksListSection = {
   title?: string;
@@ -22,10 +25,8 @@ export type LinksListSection = {
 
 const LinksList = ({
   section,
-  pageName,
 }: {
   section: LinksListSection;
-  pageName: string;
 }) => {
   return (
     <Box key={section.title} pb={5}>
@@ -43,9 +44,9 @@ const LinksList = ({
                 <Link
                   color="blue"
                   href={thing.link}
-                  isExternal
+                  isExternal={thing.isExternal}
                 >
-                  {thing.name} <ExternalLinkIcon mx="2px" />
+                  {thing.name} {thing.isExternal && <ExternalLinkIcon mx="2px" />}
                 </Link>
               ) : (
                 <span

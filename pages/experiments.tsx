@@ -10,6 +10,7 @@ const experiments: LinksListSection[] = [
         link: "/sudoku",
         description:
           "A simple sudoku game. I made it to test heavy validations on a complex react state.",
+        isExternal: false,
       },
     ],
   },
@@ -29,7 +30,7 @@ const ExperimentsPage = () => {
       </Box>
 
       {experiments.map((section) => (
-        <LinksList pageName={section.title ?? ""} key={section.title} section={section} />
+        <LinksList key={section.title} section={section} />
       ))}
     </Container>
   );
